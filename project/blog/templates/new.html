@@ -1,0 +1,70 @@
+<h1>새로운 글을 작성해주세요!</h1>
+<form action="{% url 'create'%}" method="POST">
+  {% csrf_token %}
+  <div id="whole">
+    <div id="title"><div><제목></div><input type="text" name="title" id="first" /></div>
+    <div id="body"><div><본문></div><textarea name="contents" id="second" cols="30" rows="10"></textarea></div>
+  </div>
+<div id="write_button"><input type="submit" id="third" value="작성하기" /></div>
+</form>
+
+<style>
+    h1{
+        font-size: 55px;
+        text-align: center;
+        margin-top: 60px;
+        color: #CED46A;
+    }
+    
+    #whole{
+        text-align: center;
+        color: #CED46A;
+    }
+
+    body{
+        background-color: #07553B;;
+    }
+
+    #title{
+        font-size: 25px;
+        margin-bottom: 100px;
+        margin-top: 50px;
+    }
+
+    #body{
+        font-size: 25px;
+    }
+
+    #write_button{
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    #first {
+        width: 300px;
+        height: 45px;
+        font-size: 15px;
+        font-weight: 700;
+        border-radius: 6px;
+        border: 3px solid green;
+        cursor: pointer;
+    }
+    
+    #second {
+        width: 400px;
+        height: 160px;
+        font-size: 15px;
+        font-weight: 700;
+        border-radius: 6px;
+        border: 3px solid green;
+        cursor: pointer;
+    }
+
+    #third {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+        border-radius: 6px;
+        border: 3px solid green;
+    }
+</style>

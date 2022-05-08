@@ -1,0 +1,70 @@
+<h1>글 수정하기</h1>
+<form action="{% url 'update' blog.id %}" method="POST">
+  {% csrf_token %}
+  <div id="whole_edit">
+   <div id="title_edit"><div><제목></div><input type="text" name="title" id="first" value="{{blog.title}}" /></div>
+   <div id="body_edit"><div><본문></div><textarea name="contents" id="second">{{blog.contents}}</textarea></div>
+  </div>
+  <div id="edit_button"><input type="submit" id = 'third' value="작성하기" /></div>
+</form>
+
+<style>
+    h1{
+        font-size: 55px;
+        text-align: center;
+        margin-top: 60px;
+        color: #CED46A;
+    }
+    
+    #whole_edit{
+        text-align: center;
+    }
+
+    body{
+        background-color: #07553B;;
+    }
+
+    #title_edit{
+        color: #CED46A;
+        font-size: 20px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+    #body_edit{
+        color: #CED46A;
+        font-size: 20px;
+    }
+
+    #edit_button{
+        text-align: center;
+        margin-top: 40px;
+    }
+    #first {
+        width: 300px;
+        height: 45px;
+        font-size: 15px;
+        font-weight: 700;
+        border-radius: 6px;
+        border: 3px solid green;
+        cursor: pointer;
+        margin-bottom: 50px;
+    }
+    
+    #second {
+        width: 400px;
+        height: 160px;
+        font-size: 15px;
+        font-weight: 700;
+        border-radius: 6px;
+        border: 3px solid green;
+        cursor: pointer;
+    }
+
+    #third {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+        border-radius: 6px;
+        
+</style>
